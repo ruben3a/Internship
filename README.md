@@ -22,3 +22,5 @@ Step 2 - research on ways to deal with a JSON file with Node.js
 
 
 Step 3 - API??? 
+
+        Research promises -> async/await -> fetch
