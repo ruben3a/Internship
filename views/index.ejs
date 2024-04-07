@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="category-buttons">
+      <% Object.keys(data).forEach(category => { %>
+      <button onclick="getEquipment('<%= category %>')"><%= category %></button>
+      <% }); %>
+    </div>
+    <div id="equipment-list"></div>
+
+    <script>
+      function getEquipment(category) {
+        fetch(`/equipment/${category}`)
+          .then((response) => response.json())
+          .then((data) => {
+            const equipmentList = document.getElementById("equipment-list");
+            equipmentList.innerHTML = ""; // Clear previous equipment list
+            data.forEach((equipment) => {
+              const equipmentItem = document.createElement("div");
+              equipmentItem.innerHTML = `
+                            <h3>${equipment.Nome}</h3>
+                            <p>Description: ${equipment.Descrição}</p>
+                            <p>Brand: ${equipment.Marca}</p>
+                            <p>Seller: ${equipment.Vendedor}</p>
+                            <p>Location: ${equipment.Local}</p>
+                        `;
+              equipmentList.appendChild(equipmentItem);
+            });
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+    </script>
+  </body>
+</html>

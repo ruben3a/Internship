@@ -6,11 +6,19 @@ const app = express();
 
 const port = 3000;
 
-var file = fs.readFileSync("equipamentos.json");
-const data = JSON.parse(file);
+const file = JSON.parse(fs.readFileSync("equipamentos.json"));
 
 app.get("/", (req, res) => {
-  res.send(data);
+  res.render("index.ejs", { data: file });
+});
+
+app.get("/equipment/:category", (req, res) => {
+  const category = req.params.category;
+  if (file.hasOwnProperty(category)) {
+    res.json(file[category]);
+  } else {
+    res.status(404).send("Category not found");
+  }
 });
 
 app.listen(port, () => {
