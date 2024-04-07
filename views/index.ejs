@@ -23,11 +23,22 @@
             data.forEach((equipment) => {
               const equipmentItem = document.createElement("div");
               equipmentItem.innerHTML = `
-                            <h3>${equipment.Nome}</h3>
-                            <p>Description: ${equipment.Descrição}</p>
-                            <p>Brand: ${equipment.Marca}</p>
-                            <p>Seller: ${equipment.Vendedor}</p>
-                            <p>Location: ${equipment.Local}</p>
+                            <h2>${equipment.name}</h2>
+                            <p>Description: ${equipment.description}</p>
+                            <p>Brand: ${equipment.brand}</p>
+                            <p>Seller: ${equipment.seller}</p>
+                            <p>Location: ${equipment.location}</p>
+                            <p>Serial number: ${equipment["serial number"]}</p>
+                            <p>Inventory reference: ${equipment["inventory reference"]}</p>
+                            <p>Person in charge: ${equipment["person in charge"]}</p>
+                            <p>Dates:
+                              <ul>
+                              <li>Purchase: ${equipment.dates.purchased}</li>
+                              <li>Warranty: ${equipment.dates.warranty}</li>
+                              <li>Tracking: ${equipment.dates.tracking}</li>
+                              <li>Last update: ${equipment.dates["last update"]}</li>
+                              </ul>
+                            </p>
                         `;
               equipmentList.appendChild(equipmentItem);
             });
