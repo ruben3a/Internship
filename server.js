@@ -9,7 +9,7 @@ const port = 3000;
 const file = JSON.parse(fs.readFileSync("equipamentos.json"));
 
 app.get("/", (req, res) => {
-  res.render("index.ejs", { data: file });
+  res.render("utility.ejs", { data: file });
 });
 
 app.get("/equipment/:category", (req, res) => {

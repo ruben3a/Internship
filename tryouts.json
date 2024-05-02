@@ -1,0 +1,67 @@
+[
+  {
+    "utility1": [
+      {
+        "category": "analisador enzimático",
+        "equipment": "analisador enzimático automático",
+        "description": " o y15 é um analisador automático de bancada que permite: - até 150 testes por hora; - até 72 amostras simultâneas; - até 4 posições de rack; - até 9 configurações de comprimento de onda. - mais de 60 tipos de análise, como sacarose, glicose, ácido málico, sulfito entre outros.",
+        "seller": "bdpl científica lda",
+        "brand": "biosystems",
+        "serial number": "831060532",
+        "inventory ref": "consultoria projeto levechamp 193-104.04.99-96706",
+        "location": "lab 19",
+        "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
+        "picture": "#value!",
+        "dates": [
+          {
+            "lastManutention": "99/99/9999",
+            "warranty": "99/99/9999",
+            "purchased": "99/99/9999"
+          }
+        ]
+      },
+      {
+        "category": "analisador enzimático",
+        "equipment": "analisador enzimático automático",
+        "description": " o y15 é um analisador automático de bancada que permite: - até 150 testes por hora; - até 72 amostras simultâneas; - até 4 posições de rack; - até 9 configurações de comprimento de onda. - mais de 60 tipos de análise, como sacarose, glicose, ácido málico, sulfito entre outros.",
+        "seller": "bdpl científica lda",
+        "brand": "biosystems",
+        "serial number": "831060532",
+        "inventory ref": "consultoria projeto levechamp 193-104.04.99-96706",
+        "location": "lab 19",
+        "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
+        "picture": "#value!",
+        "dates": [
+          {
+            "lastManutention": "99/99/9999",
+            "warranty": "99/99/9999",
+            "purchased": "99/99/9999"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "utility2": [
+      {
+        "category": "analisador enzimático",
+        "equipment": "analisador enzimático automático",
+        "description": " o y15 é um analisador automático de bancada que permite: - até 150 testes por hora; - até 72 amostras simultâneas; - até 4 posições de rack; - até 9 configurações de comprimento de onda. - mais de 60 tipos de análise, como sacarose, glicose, ácido málico, sulfito entre outros.",
+        "seller": "bdpl científica lda",
+        "brand": "biosystems",
+        "serial number": "831060532",
+        "inventory ref": "consultoria projeto levechamp 193-104.04.99-96706",
+        "location": "lab 19",
+        "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
+        "picture": "#value!",
+        "dates": [
+          {
+            "lastManutention": "99/99/9999",
+            "warranty": "99/99/9999",
+            "purchased": "99/99/9999"
+          }
+        ]
+      }
+    ]
+  }
+]
