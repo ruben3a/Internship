@@ -6,7 +6,8 @@ const app = express();
 
 const port = 3000;
 
-const file = JSON.parse(fs.readFileSync("equipamentos.json"));
+app.use(express.static("public"));
+const file = JSON.parse(fs.readFileSync("tryouts.json"));
 
 app.get("/", (req, res) => {
   res.render("utility.ejs", { data: file });
