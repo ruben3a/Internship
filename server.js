@@ -3,10 +3,10 @@ import fs from "fs";
 import path from "path";
 
 const app = express();
-
 const port = 3000;
 
 app.use(express.static("public"));
+
 const file = JSON.parse(fs.readFileSync("tryouts.json"));
 
 app.get("/", (req, res) => {

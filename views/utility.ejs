@@ -1,9 +1,9 @@
-<%- include("partials/header.ejs") %>
-
+<%- include("partials/header.ejs") %> <% console.log(data) %>
 <div class="container" id="category-buttons">
-  <% data.forEach(category => { %>
-  <button onclick="getEquipment('<%= category %>')"><%= category %></button>
-  <% }); %>
+  <% data.forEach(utilityObj => { %> <%
+  Object.keys(utilityObj).forEach(utilityName => { %>
+  <button onclick="getUtility('<%= utilityName %>')"><%= utilityName %></button>
+  <% }); %> <% }); %>
 </div>
 <div id="equipment-list"></div>
 
