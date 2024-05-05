@@ -1,43 +1,14 @@
-<%- include("partials/header.ejs") %> <% console.log(data) %>
+<%- include("partials/header.ejs") %>
 <div class="container" id="category-buttons">
-  <% data.forEach(utilityObj => { %> <%
-  Object.keys(utilityObj).forEach(utilityName => { %>
-  <button onclick="getUtility('<%= utilityName %>')"><%= utilityName %></button>
+  <% data.forEach(Obj => { %> <% Object.keys(Obj).forEach(utility => { %>
+  <button onclick="getEquipments('<%= utility %>')"><%=utility%></button>
   <% }); %> <% }); %>
 </div>
-<div id="equipment-list"></div>
 
 <script>
-  function getEquipment(category) {
-    fetch(`/equipment/${category}`)
-      .then((response) => response.json())
-      .then((data) => {
-        const equipmentList = document.getElementById("equipment-list");
-        equipmentList.innerHTML = ""; // Clear previous equipment list
-        data.forEach((equipment) => {
-          const equipmentItem = document.createElement("div");
-          equipmentItem.innerHTML = `
-                          <h2>${equipment.equpment}</h2>
-                          <p>Description: ${equipment.description}</p>
-                          <p>Brand: ${equipment.brand}</p>
-                          <p>Seller: ${equipment.seller}</p>
-                          <p>Location: ${equipment.location}</p>
-                          <p>Serial number: ${equipment["serial number"]}</p>
-                          <p>Inventory reference: ${equipment["inventory reference"]}</p>
-                          <p>Person in charge: ${equipment["person in charge"]}</p>
-                          <p>Dates:
-                            <ul>
-                            <li>Purchase: ${equipment.dates.purchased}</li>
-                            <li>Warranty: ${equipment.dates.warranty}</li>
-                            <li>Tracking: ${equipment.dates.tracking}</li>
-                            <li>Last update: ${equipment.dates["last update"]}</li>
-                            </ul>
-                          </p>
-                      `;
-          equipmentList.appendChild(equipmentItem);
-        });
-      })
-      .catch((error) => console.error("Error:", error));
+  function getEquipments(utility) {
+    // Redirect to the details page with the utility name as a parameter
+    window.location.href = "/equipment/" + encodeURIComponent(utility);
   }
 </script>
 

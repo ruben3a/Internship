@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+<div>
+  <h2><%= utility %></h2>
+  <% equipment.forEach(item => { %>
+  <div>
+    <h3><%= item.equipment %></h3>
+    <ul>
+      <li><strong>Description:</strong> <%= item.description %></li>
+      <!-- Add more details as needed -->
+    </ul>
+  </div>
+  <% }); %>
+</div>
+
+<%-include("partials/footer.ejs") %>

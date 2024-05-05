@@ -13,13 +13,19 @@ app.get("/", (req, res) => {
   res.render("utility.ejs", { data: file });
 });
 
-app.get("/equipment/:category", (req, res) => {
-  const category = req.params.category;
-  if (file.hasOwnProperty(category)) {
-    res.json(file[category]);
-  } else {
-    res.status(404).send("Category not found");
-  }
+app.get("/equipment/:utility", (req, res) => {
+  const utility = req.params.utility;
+
+  // Find the utility object in the 'file' array based on the utility name
+  const equipment = file.find(
+    (utilityObj) => Object.keys(utilityObj)[0] === utility
+  );
+
+  // Extract the equipment array from the utility object
+  const equipmentData = equipment ? equipment[utility] : [];
+
+  // Render the 'equipments.ejs' template with the utility and equipment data
+  res.render("equipments.ejs", { utility, equipment: equipmentData });
 });
 
 app.listen(port, () => {
