@@ -28,6 +28,12 @@ app.get("/equipment/:utility", (req, res) => {
   res.render("equipments.ejs", { utility, equipment: equipmentData });
 });
 
+app.get("/equipment/:equipmentName/dates", (req, res) => {
+  const equipmentName = req.params.equipmentName;
+  // Render a new template to display dates relative to the equipment
+  res.render("dates.ejs", { equipmentName });
+});
+
 app.listen(port, () => {
   console.log("running");
 });
