@@ -3,6 +3,8 @@ import fetch from "file-fetch";
 
 const app = express();
 
+//missing the styling because of the public folder - remember!!!
+
 const port = 3000;
 
 async function fetchData() {
