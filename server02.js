@@ -7,7 +7,7 @@ const port = 3000;
 
 async function fetchData() {
   try {
-    const response = await fetch("equipamentos.json");
+    const response = await fetch("tryouts.json");
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -22,7 +22,7 @@ async function fetchData() {
 app.get("/", async (req, res) => {
   try {
     const file = await fetchData();
-    res.render("index.ejs", { data: file });
+    res.render("utility.ejs", { data: file });
   } catch (error) {
     res.status(500).send("Internal Server Error");
   }
