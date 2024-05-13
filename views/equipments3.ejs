@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Equipments</h1>
+<% equipments.forEach(i => { %>
+<div>
+  <h2><%= i.equipment %></h2>
+  <form action="/page2/<%= i.equipment %>" method="GET">
+    <button type="submit">equipments</button>
+  </form>
+</div>
+<% }); %> <%-include("partials/footer.ejs") %>
