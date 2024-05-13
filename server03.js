@@ -24,24 +24,28 @@ app.get("/:utility/equipments", (req, res) => {
   if (!utilitydata) {
     return res.status(404).json({ error: "Utility not found" });
   }
-  res.render("equipments3.ejs", { equipments: utilitydata.objects });
+  res.render("equipments3.ejs", {
+    equipments: utilitydata.objects,
+    utility: utilityReq,
+  });
 });
 
 // Page 3: Display dates of the selected object
-app.get("/page3/:utilityName/:index", (req, res) => {
-  const utilityName = req.params.utilityName;
+app.get("/:utility/:equipments/dates", (req, res) => {
+  const utilityReq = req.params.utility;
   const index = parseInt(req.params.index);
-  const utility = parsedData.utilities.find(
-    (utility) => utility.name === utilityName
+  const utilitydata = parsedData.utilities.find(
+    (utility) => utility.name === utilityReq
   );
-  if (!utility) {
+  if (!utilitydata) {
     return res.status(404).json({ error: "Utility not found" });
   }
-  const object = utility.objects[index];
+  const object = utilitydata.objects;
   if (!object) {
     return res.status(404).json({ error: "Object not found" });
   }
-  res.json(object.dates);
+  console.log(object);
+  res.render("dates3.ejs", { dates: object.dates });
 });
 
 app.listen(port, () => {
