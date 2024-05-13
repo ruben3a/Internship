@@ -1,0 +1,65 @@
+{
+  "utilities": [
+    {
+      "name": "utility1",
+      "objects": [
+        {
+          "category": "analisador",
+          "equipment": "analisador enzimático automático",
+          "description": "...",
+          "seller": "bdpl científica lda",
+          "brand": "biosystems",
+          "serial_number": "831060532",
+          "inventory_ref": "consultoria projeto levechamp 193-104.04.99-96706",
+          "location": "lab 19",
+          "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
+          "picture": "#value!",
+          "dates": {
+            "last_maintenance": "99/99/9999",
+            "warranty": "99/99/9999",
+            "purchased": "99/99/9999"
+          }
+        },
+        {
+          "category": "analisador enzimático",
+          "equipment": "analisador enzimático automático",
+          "description": "...",
+          "seller": "bdpl científica lda",
+          "brand": "biosystems",
+          "serial_number": "831060532",
+          "inventory_ref": "consultoria projeto levechamp 193-104.04.99-96706",
+          "location": "lab 19",
+          "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
+          "picture": "#value!",
+          "dates": {
+            "last_maintenance": "99/99/9999",
+            "warranty": "99/99/9999",
+            "purchased": "99/99/9999"
+          }
+        }
+      ]
+    },
+    {
+      "name": "utility2",
+      "objects": [
+        {
+          "category": "analisador enzimático",
+          "equipment": "analisador enzimático automático",
+          "description": "...",
+          "seller": "bdpl científica lda",
+          "brand": "biosystems",
+          "serial_number": "831060532",
+          "inventory_ref": "consultoria projeto levechamp 193-104.04.99-96706",
+          "location": "lab 19",
+          "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
+          "picture": "#value!",
+          "dates": {
+            "last_maintenance": "99/99/9999",
+            "warranty": "99/99/9999",
+            "purchased": "99/99/9999"
+          }
+        }
+      ]
+    }
+  ]
+}
