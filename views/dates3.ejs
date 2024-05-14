@@ -1,8 +1,10 @@
 <%- include("partials/header.ejs") %>
 
-<h1>Dates</h1>
-<% dates.forEach(i => { %>
-<div>
-  <h2><%= i %></h2>
-</div>
-<% }); %> <%-include("partials/footer.ejs") %>
+<h2>Utility: <%= utilityReq %></h2>
+<h3>Object Index: <%= index %></h3>
+<ul>
+  <% dates.forEach(dateObj => { %>
+  <li><strong><%= dateObj.key %>:</strong> <%= dateObj.value %></li>
+  <% }); %>
+</ul>
+%> <%-include("partials/footer.ejs") %>

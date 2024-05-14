@@ -1,10 +1,13 @@
 <%- include("partials/header.ejs") %>
 
 <h1>Equipments based on <%= utility %></h1>
-<% equipments.forEach(i => { %>
+<% equipments.forEach((i , index)=> { %>
 <div>
   <h2><%= i.equipment %></h2>
-  <form action="/<%= utility %>/<%= i.equipment %>/dates" method="GET">
+  <form
+    action="/<%= utility %>/<%= i.equipment %>/<%= index %>/dates"
+    method="GET"
+  >
     <button type="submit">dates</button>
   </form>
 </div>

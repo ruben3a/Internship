@@ -31,7 +31,7 @@ app.get("/:utility/equipments", (req, res) => {
 });
 
 // Page 3: Display dates of the selected object
-app.get("/:utility/:equipments/dates", (req, res) => {
+app.get("/:utility/:equipments/:index/dates", (req, res) => {
   const utilityReq = req.params.utility;
   const index = parseInt(req.params.index);
   const utilitydata = parsedData.utilities.find(
@@ -40,12 +40,16 @@ app.get("/:utility/:equipments/dates", (req, res) => {
   if (!utilitydata) {
     return res.status(404).json({ error: "Utility not found" });
   }
-  const object = utilitydata.objects;
+  const object = utilitydata.objects[index];
   if (!object) {
     return res.status(404).json({ error: "Object not found" });
   }
-  console.log(object);
-  res.render("dates3.ejs", { dates: object.dates });
+  console.log(object.dates);
+  const datesArray = Object.entries(object.dates).map(([key, value]) => ({
+    key,
+    value,
+  }));
+  res.render("dates3.ejs", { utilityReq, index, dates: datesArray });
 });
 
 app.listen(port, () => {
