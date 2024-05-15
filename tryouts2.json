@@ -1,16 +1,84 @@
 {
   "utilities": [
     {
-      "name": "utility1",
+      "name": "Physicochemical Analysis",
       "objects": [
         {
-          "category": "analisador",
+          "category": "analisador enzimático",
           "equipment": "analisador enzimático automático",
-          "description": "...",
-          "seller": "bdpl científica lda",
-          "brand": "biosystems",
+          "description": "O Y15 é um analisador automático de bancada que permite: - Até 150 testes por hora; - Até 72 amostras simultâneas; - Até 4 posições de rack; - Até 9 configurações de comprimento de onda. - Mais de 60 tipos de análise, como sacarose, glicose, ácido málico, sulfito entre outros.",
+          "seller": "Bdpl científica lda",
+          "brand": "Biosystems",
           "serial_number": "831060532",
           "inventory_ref": "consultoria projeto levechamp 193-104.04.99-96706",
+          "location": "lab 19",
+          "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
+          "picture": "IMAGEM",
+          "dates": {
+            "last_maintenance": "99/99/9999",
+            "warranty": "99/99/9999",
+            "purchased": "99/99/9999"
+          }
+        },
+        {
+          "category": "Medidores",
+          "equipment": "Densimetro portátil",
+          "description": "Portable, handheld measuring instrument analyzes liquids for density or specific gravity. Mettler Toledo Densito 30PX Density Meter operates on the oscillating tube principle. Results are automatically calculated into one of the following units: density, specific gravity, API degrees, Brix, % Alcohol, % H2SO4, °Baume,°Plato, Proof or a user defined unit. Shows results within seconds.",
+          "seller": null,
+          "brand": "Mettler Toledo",
+          "serial_number": "LWE81950",
+          "inventory_ref": "Densito 30PX",
+          "location": "lab 18",
+          "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
+          "picture": "#value!",
+          "dates": {
+            "last_maintenance": "99/99/9999",
+            "warranty": "99/99/9999",
+            "purchased": "01/11/2011"
+          }
+        },
+        {
+          "category": "Espetrofotómetro",
+          "equipment": "Biofotómetro",
+          "description": "Para uso em biologia molecular, bioquímica e biologia celular. Todas as medições e cálculos de resultados são feitos com o clique de um botão e todos os dados relacionados aos resultados da análise podem ser vistos rapidamente. Isso garante uma operação segura e sem erros e resultados confiáveis. Além de leve, o fotômetro é pequeno, mas extremamente durável graças ao seu robusto invólucro metálico, que facilita o transporte e a limpeza. O BioPhotometer plus foi projetado para uso com cubetas como a Eppendorf UVette®, mas também é otimizado para medições de pequenos volumes usando células de microlitro como a Hellma® TrayCell. Seus campos de aplicação incluem: Quantificação de ácidos nucléicos (dsDNA, ssDNA, RNA, Oligo); Quantificação de proteínas (280 nm, Bradford, Lowry, BCA); Medição de densidade celular (OD600); Absorção de corantes fluorescentes (corantes 550/650, por exemplo, Cy-3, Cy-5); Ensaios enzimáticos: determinação de pontos finais sem cálculo (por exemplo, atividade enzimática ou bioensaios celulares) e medições diretas de absorbância em comprimentos de onda individuais (230 nm, 260 nm, 280 nm, nm).",
+          "seller": "Avantor",
+          "brand": "Eppendorf",
+          "serial_number": "6131 23409",
+          "inventory_ref": "Biophotometer 6131",
+          "location": "lab 20",
+          "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
+          "picture": "#value!",
+          "dates": {
+            "last_maintenance": "99/99/9999",
+            "warranty": "99/99/9999",
+            "purchased": "01/06/2003"
+          }
+        },
+        {
+          "category": "Espetrofotómetro",
+          "equipment": "Biofotómetro D30",
+          "description": "The Eppendorf BioPhotometer D30 is the third generation of the well-established line of Eppendorf BioPhotometers, also known as detection instruments or photometers. The compact instrument clearly processes data, records at fixed wavelengths and makes evaluating results fast and simple. For specific methods, additional measurements are recorded and displayed as a graph, making impurities easier and quicker to identify.",
+          "seller": "Avantor",
+          "brand": "Eppendorf",
+          "serial_number": "6133IP002185",
+          "inventory_ref": "BioPhotometer D30",
+          "location": "lab 20",
+          "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
+          "picture": "#value!",
+          "dates": {
+            "last_maintenance": "99/99/9999",
+            "warranty": "99/99/9999",
+            "purchased": "01/11/2011"
+          }
+        },
+        {
+          "category": "Espetrofotómetro",
+          "equipment": "Espectrofotómetro Spectronic",
+          "description": "MPN: 4001/4 65496G - Spectronic 20 Genesys Visible Spectrophotometer Model 4001/4",
+          "seller": null,
+          "brand": "Spectronic",
+          "serial_number": "3SG9200006",
+          "inventory_ref": "20 genesys 4001/4",
           "location": "lab 19",
           "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
           "picture": "#value!",
@@ -21,13 +89,13 @@
           }
         },
         {
-          "category": "analisador enzimático",
-          "equipment": "analisador enzimático automático",
-          "description": "...",
-          "seller": "bdpl científica lda",
-          "brand": "biosystems",
-          "serial_number": "831060532",
-          "inventory_ref": "consultoria projeto levechamp 193-104.04.99-96706",
+          "category": "Espetrofotómetro",
+          "equipment": "Espectrofotómetro Shimadzu",
+          "description": "Shimadzu UV-2101 PC Uv-Vis Spectrophotometer Model: UV-2101PC, • Aresearch-grade Dual Beam Uv-Vis spectrophotometer, • Fast Scanning, 190nm- 900nm, • Resolution: 0.1nm, etc.",
+          "seller": null,
+          "brand": "Shimadzu",
+          "serial_number": "UTAD-29050",
+          "inventory_ref": "UV-2101 PC",
           "location": "lab 19",
           "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
           "picture": "#value!",
@@ -40,17 +108,34 @@
       ]
     },
     {
-      "name": "utility2",
+      "name": " Molecular Biology",
       "objects": [
         {
-          "category": "analisador enzimático",
-          "equipment": "analisador enzimático automático",
-          "description": "...",
-          "seller": "bdpl científica lda",
-          "brand": "biosystems",
-          "serial_number": "831060532",
-          "inventory_ref": "consultoria projeto levechamp 193-104.04.99-96706",
-          "location": "lab 19",
+          "category": "Transiluminador",
+          "equipment": "Transiluminador de luz UV",
+          "description": "Transiluminador para visualização de géis",
+          "seller": "Vilber Lourmat",
+          "brand": "Vilber Lourmat",
+          "serial_number": "V039911",
+          "inventory_ref": null,
+          "location": "lab 3",
+          "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
+          "picture": "#value!",
+          "dates": {
+            "last_maintenance": "99/99/9999",
+            "warranty": "99/99/9999",
+            "purchased": "99/99/9999"
+          }
+        },
+        {
+          "category": "Transiluminador com Captador de imagem",
+          "equipment": "Gel-Doc",
+          "description": "The Biorad Gel Doc EQ System w/ Universal Hood II is an easy-to-use, high-performance system that captures images in real time, allowing you to more accurately position and focus on your sample. The Gel Doc system combines a compact darkroom, UV-transilluminator workstation, CCD camera, motorized zoom lens, and user-friendly Quantity One software to document and quantitate gels stained with ethidium bromide and other fluorophores. The iris, zoom, and focus of the lens can be manipulated either onscreen within Quantity One software or by the instrument control panel. With Biorad&#39;s intuitive software, images acquired with the Gel Doc can be rapidly optimized, annotated, analyzed, and printed.",
+          "seller": null,
+          "brand": "Bio-Rad",
+          "serial_number": "UTAD-0023184",
+          "inventory_ref": null,
+          "location": "lab 3",
           "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
           "picture": "#value!",
           "dates": {
