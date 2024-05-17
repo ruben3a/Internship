@@ -1,7 +1,8 @@
 {
   "utilities": [
     {
-      "name": "Physicochemical Analysis",
+      "name": "Physico-chemical Analysis",
+      "icon": "/PCA.svg",
       "objects": [
         {
           "category": "analisador enzimático",
@@ -109,6 +110,7 @@
     },
     {
       "name": " Molecular Biology",
+      "icon": "/MB.svg",
       "objects": [
         {
           "category": "Transiluminador",

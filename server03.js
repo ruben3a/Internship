@@ -1,8 +1,14 @@
 import express from "express";
 import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 const port = 3000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(express.static(path.join(__dirname, "public")));
 
 // Read the JSON file
 const file = fs.readFileSync("tryouts2.json", "utf8");
@@ -11,8 +17,11 @@ const parsedData = JSON.parse(file);
 // Page 1: Display utility names
 app.get("/", (req, res) => {
   const utilityNames = parsedData.utilities.map((utility) => utility.name);
-  console.log(utilityNames);
-  res.render("utility3.ejs", { utilities: utilityNames });
+  console.log(parsedData.utilities);
+  res.render("utility3.ejs", {
+    data: parsedData.utilities,
+    utilities: utilityNames,
+  });
 });
 
 // Page 2: Display objects based on utility
