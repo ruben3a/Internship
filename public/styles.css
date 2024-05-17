@@ -2,10 +2,10 @@
   font-size: 2rem;
 }
 
-footer {
-  background-color: black;
-}
-
 body {
   height: 100vh;
+}
+
+.rounded-div {
+  border-radius: 50px !important;
 }
