@@ -33,8 +33,9 @@ app.get("/:utility/equipments", (req, res) => {
   if (!utilitydata) {
     return res.status(404).json({ error: "Utility not found" });
   }
+  console.log(utilitydata);
   res.render("equipments3.ejs", {
-    equipments: utilitydata.objects,
+    equipmentsArray: utilitydata.objects,
     utility: utilityReq,
   });
 });
