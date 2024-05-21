@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
+import inquirer from "inquirer";
 
 const app = express();
 const port = 3000;
@@ -10,14 +11,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(bodyParser.urlencoded({ extended: true }));
+const filePath = "tryouts2.json";
 
 // Read the JSON file
 const file = fs.readFileSync("tryouts2.json", "utf8");
 const parsedData = JSON.parse(file);
 
-const writeJsonFile = (filePath, data) => {
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
-};
+function writeJsonFile() {
+  fs.writeFileSync(filePath, JSON.stringify(parsedData, null, 2), "utf8");
+}
 
 // Page 1: Display utility names
 app.get("/", (req, res) => {
@@ -45,33 +48,35 @@ app.get("/:utility/equipments", (req, res) => {
   });
 });
 
-app.post("/add-equipment", (req, res) => {
-  const { utilityName, newEquipment } = req.body;
+app.get("/:utility/newEquipment", (req, res) => {
+  const utilityReq = req.params.utility;
+  res.render("newEquipment.ejs", { utility: utilityReq });
+});
+
+app.post("/:utility/New-Equipment", (req, res) => {
+  const utilityReq = req.params.utility;
+  console.log(req.body);
+  const newEquipment = req.body;
 
   // Validate the input
-  if (!utilityName || !newEquipment) {
-    return res
-      .status(400)
-      .json({ message: "Utility name and new equipment data are required" });
+  if (!newEquipment) {
+    return res.status(400).json({ message: "New equipment data is required" });
   }
 
-  // Read existing data from the JSON file
-  let data = readJsonFile(dataFilePath);
-
   // Find the utility object by name
-  const utility = data.utilities.find((u) => u.name === utilityName);
+  const utility = parsedData.utilities.find((i) => i.name === utilityReq);
 
   if (utility && Array.isArray(utility.objects)) {
     // Add the new equipment to the objects array
     utility.objects.push(newEquipment);
 
     // Write the updated data back to the JSON file
-    writeJsonFile(dataFilePath, data);
+    writeJsonFile();
 
     // Send a response back to the client
-    res
-      .status(201)
-      .json({ message: "Equipment added successfully", newEquipment });
+    console.log(201);
+    console.log({ message: "Equipment added successfully", newEquipment });
+    res.redirect("/");
   } else {
     // Send an error response if the utility is not found or objects is not an array
     res
