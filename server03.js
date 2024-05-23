@@ -55,7 +55,6 @@ app.get("/:utility/newEquipment", (req, res) => {
 
 app.post("/:utility/New-Equipment", (req, res) => {
   const utilityReq = req.params.utility;
-  console.log(req.body);
   const newEquipment = req.body;
 
   // Validate the input
@@ -82,6 +81,54 @@ app.post("/:utility/New-Equipment", (req, res) => {
     res
       .status(400)
       .json({ message: "Utility not found or objects is not an array" });
+  }
+});
+
+app.get("/:utility/:equipments/delete", (req, res) => {
+  const utilityReq = req.params.utility;
+  const EquipName = req.params.equipments;
+  res.render("deleteEquipment.ejs", {
+    utility: utilityReq,
+    equipment: EquipName,
+  });
+});
+
+app.post("/:utility/:equipments/Delete-Equipment", (req, res) => {
+  const utilityReq = req.params.utility;
+  const EquipName = req.params.equipments;
+  const confirmation = req.body;
+
+  // Validate the input
+  if (confirmation === "confirm") {
+    return res.status(400).json({ message: "Confirmation required" });
+  }
+
+  // Find the utility object by name
+  const utility = parsedData.utilities.find((i) => i.name === utilityReq);
+  if (utility && Array.isArray(utility.objects)) {
+    // Add the new equipment to the objects array
+    const Equipindex = utility.objects.findIndex(
+      (equipment) => equipment.equipment === EquipName
+    );
+    console.log(Equipindex);
+
+    if (Equipindex !== -1) {
+      // Remove the equipment from the objects array
+      utility.objects.splice(Equipindex, 1);
+
+      // Write the updated data back to the JSON file
+      writeJsonFile();
+
+      // Send a response back to the client
+      console.log(201);
+      console.log({ message: "Equipment deleted successfully" });
+      res.redirect("/");
+    } else {
+      // Send an error response if the utility is not found or objects is not an array
+      res
+        .status(400)
+        .json({ message: "Utility not found or objects is not an array" });
+    }
   }
 });
 
