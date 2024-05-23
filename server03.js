@@ -99,7 +99,7 @@ app.post("/:utility/:equipments/Delete-Equipment", (req, res) => {
   const confirmation = req.body;
 
   // Validate the input
-  if (confirmation === "confirm") {
+  if (confirmation != "confirm") {
     return res.status(400).json({ message: "Confirmation required" });
   }
 
