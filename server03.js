@@ -96,7 +96,8 @@ app.get("/:utility/:equipments/delete", (req, res) => {
 app.post("/:utility/:equipments/Delete-Equipment", (req, res) => {
   const utilityReq = req.params.utility;
   const EquipName = req.params.equipments;
-  const confirmation = req.body;
+  const confirmation = req.body.confirmation;
+  console.log(confirmation);
 
   // Validate the input
   if (confirmation != "confirm") {
