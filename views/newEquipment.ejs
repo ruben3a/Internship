@@ -1,64 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add New Equipment</title>
-  </head>
-  <body>
-    <h1>Add New Equipment to <%= utility %></h1>
-    <form
-      id="equipmentForm"
-      action="/<%= utility  %>/New-Equipment"
-      method="post"
+<%- include("partials/header.ejs") %>
+
+<h1>Add New Equipment to <%= utility %></h1>
+<form id="equipmentForm" action="/<%= utility  %>/New-Equipment" method="post">
+  <div class="mb-3">
+    <label for="category" class="form-label">Category:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="formGroupExampleInput2 category"
+      name="category"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="equipment" class="form-label">Equipment name:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="formGroupExampleInput2 equipment"
+      name="equipment"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Description:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="description formGroupExampleInput2"
+      name="equipment"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="seller" class="form-label">Seller:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="seller formGroupExampleInput2"
+      name="seller"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="brand" class="form-label">Brand:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="brand formGroupExampleInput2"
+      name="brand"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="serial_number" class="form-label">Serial_number:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="serial_number formGroupExampleInput2"
+      name="serial_number"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="inventory_ref" class="form-label">Inventory_ref:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inventory_ref formGroupExampleInput2"
+      name="inventory_ref"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="location" class="form-label">Location:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="location formGroupExampleInput2"
+      name="location"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="responsible" class="form-label">Responsible:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="responsible formGroupExampleInput2"
+      name="responsible"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="last_maintenance" class="form-label"
+      >Last Maintenance Date:</label
     >
-      <label for="category">Category:</label><br />
-      <input type="text" id="category" name="category" required /><br /><br />
+    <input
+      type="text"
+      class="form-control"
+      id="last_maintenance formGroupExampleInput2"
+      name="dates[last_maintenance]"
+      placeholder="dd/mm/yyyy"
+      required
+    />
+  </div>
 
-      <label for="equipment">Equipment:</label><br />
-      <input type="text" id="equipment" name="equipment" required /><br /><br />
+  <div class="mb-3">
+    <label for="warranty" class="form-label">Warranty:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="warranty formGroupExampleInput2"
+      name="dates[warranty]"
+      placeholder="dd/mm/yyyy"
+      required
+    />
+  </div>
 
-      <label for="description">Description:</label><br />
-      <textarea id="description" name="description" required></textarea
-      ><br /><br />
+  <div class="mb-3">
+    <label for="purchased" class="form-label">Purchased:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="purchased formGroupExampleInput2"
+      name="dates[purchased]"
+      placeholder="dd/mm/yyyy"
+      required
+    />
+  </div>
 
-      <label for="seller">Seller:</label><br />
-      <input type="text" id="seller" name="seller" /><br /><br />
+  <input type="submit" value="Submit" />
+</form>
 
-      <label for="brand">Brand:</label><br />
-      <input type="text" id="brand" name="brand" /><br /><br />
-
-      <label for="serial_number">Serial Number:</label><br />
-      <input type="text" id="serial_number" name="serial_number" /><br /><br />
-
-      <label for="inventory_ref">Inventory Reference:</label><br />
-      <input type="text" id="inventory_ref" name="inventory_ref" /><br /><br />
-
-      <label for="location">Location:</label><br />
-      <input type="text" id="location" name="location" required /><br /><br />
-
-      <label for="responsible">Responsible:</label><br />
-      <input
-        type="text"
-        id="responsible"
-        name="responsible"
-        required
-      /><br /><br />
-
-      <label for="last_maintenance">Last Maintenance:</label><br />
-      <input
-        type="text"
-        id="last_maintenance"
-        name="dates[last_maintenance]"
-      /><br /><br />
-
-      <label for="warranty">Warranty:</label><br />
-      <input type="text" id="warranty" name="dates[warranty]" /><br /><br />
-
-      <label for="purchased">Purchased:</label><br />
-      <input type="text" id="purchased" name="dates[purchased]" /><br /><br />
-
-      <input type="submit" value="Submit" />
-    </form>
-  </body>
-</html>
+<%-include("partials/footer.ejs") %>

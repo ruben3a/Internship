@@ -1,27 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Delete Equipment</title>
-  </head>
-  <body>
-    <h1>Delete Equipment</h1>
-    <form
-      id="deleteForm"
-      action="/<%=utility%>/<%=equipment%>/Delete-Equipment"
-      method="post"
-    >
-      <p>Are u sure u want to delete <%=equipment%> from stock?</p>
-      <label for="confirmation">Write "confirm" to delete:</label><br />
-      <input
-        type="text"
-        id="confirmation"
-        name="confirmation"
-        required
-      /><br /><br />
+<%- include("partials/header.ejs") %>
 
-      <input type="submit" value="submit" />
-    </form>
-  </body>
-</html>
+<h1>Delete Equipment</h1>
+<form
+  id="deleteForm"
+  action="/<%=utility%>/<%=equipment%>/Delete-Equipment"
+  method="post"
+>
+  <p>Are u sure u want to delete <%=equipment%> from stock?</p>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label"
+      >Write "confirm" to delete:</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      id="formGroupExampleInput"
+      name="confirmation"
+      placeholder=""
+    />
+  </div>
+  <input type="submit" value="submit" />
+</form>
+
+<%-include("partials/footer.ejs") %>
