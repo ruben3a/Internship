@@ -5,8 +5,8 @@
       "icon": "/PCA.svg",
       "objects": [
         {
-          "category": "analisador enzimático",
-          "equipment": "analisador enzimático automático",
+          "category": "Analisador enzimático",
+          "equipment": "Analisador enzimático automático",
           "description": "O Y15 é um analisador automático de bancada que permite: - Até 150 testes por hora; - Até 72 amostras simultâneas; - Até 4 posições de rack; - Até 9 configurações de comprimento de onda. - Mais de 60 tipos de análise, como sacarose, glicose, ácido málico, sulfito entre outros.",
           "seller": "Bdpl científica lda",
           "brand": "Biosystems",
@@ -14,7 +14,7 @@
           "inventory_ref": "consultoria projeto levechamp 193-104.04.99-96706",
           "location": "lab 19",
           "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
-          "picture": "IMAGEM",
+          "picture": "/imgsEquip/1.jpeg",
           "dates": {
             "last_maintenance": "99/99/9999",
             "warranty": "99/99/9999",
@@ -31,7 +31,7 @@
           "inventory_ref": "Densito 30PX",
           "location": "lab 18",
           "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
-          "picture": "#value!",
+          "picture": "/imgsEquip/5.jpeg",
           "dates": {
             "last_maintenance": "99/99/9999",
             "warranty": "99/99/9999",
@@ -48,7 +48,7 @@
           "inventory_ref": "Biophotometer 6131",
           "location": "lab 20",
           "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
-          "picture": "#value!",
+          "picture": "/imgsEquip/6.jpeg",
           "dates": {
             "last_maintenance": "99/99/9999",
             "warranty": "99/99/9999",
@@ -65,7 +65,7 @@
           "inventory_ref": "BioPhotometer D30",
           "location": "lab 20",
           "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
-          "picture": "#value!",
+          "picture": "/imgsEquip/9.jpeg",
           "dates": {
             "last_maintenance": "99/99/9999",
             "warranty": "99/99/9999",
@@ -82,7 +82,7 @@
           "inventory_ref": "20 genesys 4001/4",
           "location": "lab 19",
           "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
-          "picture": "#value!",
+          "picture": "/imgsEquip/10.jpeg",
           "dates": {
             "last_maintenance": "99/99/9999",
             "warranty": "99/99/9999",
@@ -99,7 +99,7 @@
           "inventory_ref": "UV-2101 PC",
           "location": "lab 19",
           "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
-          "picture": "#value!",
+          "picture": "/imgsEquip/11.jpeg",
           "dates": {
             "last_maintenance": "99/99/9999",
             "warranty": "99/99/9999",
@@ -122,7 +122,7 @@
           "inventory_ref": null,
           "location": "lab 3",
           "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
-          "picture": "#value!",
+          "picture": "/imgsEquip/2.jpeg",
           "dates": {
             "last_maintenance": "99/99/9999",
             "warranty": "99/99/9999",
@@ -139,7 +139,7 @@
           "inventory_ref": null,
           "location": "lab 3",
           "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
-          "picture": "#value!",
+          "picture": "/imgsEquip/19.jpeg",
           "dates": {
             "last_maintenance": "99/99/9999",
             "warranty": "99/99/9999",

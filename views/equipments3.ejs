@@ -1,45 +1,46 @@
 <%- include("partials/headerEquipments.ejs") %>
 
-<h1>Equipments for <%= utility %></h1>
+<h1 class="py-4"><%= utility %> Equipments</h1>
 <% equipmentsArray.forEach((i , index)=> { %>
-<div>
-  <h2><%= i.equipment %></h2>
-  <form action="/<%=utility%>/<%=i.equipment%>/<%=index%>/dates" method="GET">
-    <button type="submit">dates</button>
-  </form>
-</div>
 
-<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-  <div class="col-10 col-sm-8 col-lg-6">
+<div class="row flex-lg-row align-items-center g-5 py-5">
+  <div class="col-lg-3 order-lg-2">
     <img
-      src="bootstrap-themes.png"
-      class="d-block mx-lg-auto img-fluid"
-      alt="Bootstrap Themes"
-      width="700"
-      height="500"
+      src="<%=i.picture%>"
+      class="d-block mx-auto img-fluid"
+      alt="Equipment image missing"
+      width="500"
+      height="300"
       loading="lazy"
     />
   </div>
-  <div class="col-lg-6">
-    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+  <div class="col-lg-9 order-lg-1">
+    <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
       <%= i.equipment %>
-    </h1>
-    <p class="lead"><%= i.description %></p>
+    </h2>
+    <p class="lead mb-4"><%= i.description %></p>
+    <p class="lead mb-4">Category: <%= i.category %></p>
+    <p class="lead mb-4">Location: <%= i.location %></p>
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
       <form
         action="/<%=utility%>/<%=i.equipment%>/<%=index%>/dates"
         method="GET"
       >
-        <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2">
+        <button type="submit" class="btn btn-primary btn-lg me-md-2">
           Dates/more info
         </button>
       </form>
-      <form action="/<%=utility%>/<%=i.equipment%>/delete" method="GET">
-        <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2">
+      <form
+        action="/<%=utility%>/<%=i.equipment%>/delete"
+        class="px-4"
+        method="GET"
+      >
+        <button type="submit" class="btn btn-outline-secondary btn-lg px-4">
           Delete Equipment
         </button>
       </form>
     </div>
   </div>
 </div>
+
 <% }); %> <%-include("partials/footer.ejs") %>

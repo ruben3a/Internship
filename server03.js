@@ -97,7 +97,6 @@ app.post("/:utility/:equipments/Delete-Equipment", (req, res) => {
   const utilityReq = req.params.utility;
   const EquipName = req.params.equipments;
   const confirmation = req.body.confirmation;
-  console.log(confirmation);
 
   // Validate the input
   if (confirmation != "confirm") {
@@ -111,7 +110,6 @@ app.post("/:utility/:equipments/Delete-Equipment", (req, res) => {
     const Equipindex = utility.objects.findIndex(
       (equipment) => equipment.equipment === EquipName
     );
-    console.log(Equipindex);
 
     if (Equipindex !== -1) {
       // Remove the equipment from the objects array
@@ -147,7 +145,6 @@ app.get("/:utility/:equipments/:index/dates", (req, res) => {
   if (!object) {
     return res.status(404).json({ error: "Object not found" });
   }
-  console.log(object.dates);
   const datesArray = Object.entries(object.dates).map(([key, value]) => ({
     key,
     value,
