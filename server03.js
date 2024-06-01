@@ -32,6 +32,10 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/AllEquipments", (req, res) => {
+  res.render("AllEquipments.ejs", { utility: parsedData.utilities });
+});
+
 // Page 2: Display objects based on utility
 app.get("/:utility/equipments", (req, res) => {
   const utilityReq = req.params.utility;

@@ -1,0 +1,47 @@
+<%- include("partials/header.ejs") %>
+
+<h1>All equipments in the W&B laboratory</h1>
+
+<% utility.forEach(function(i) { i.objects.forEach(function(equip, index) { %>
+
+<div class="row flex-lg-row align-items-center g-5 py-5">
+  <div class="col-lg-3 order-lg-2">
+    <img
+      src="<%= equip.picture %>"
+      class="d-block mx-auto img-fluid"
+      alt="Equipment image missing"
+      width="500"
+      height="300"
+      loading="lazy"
+    />
+  </div>
+  <div class="col-lg-9 order-lg-1">
+    <h2 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+      <%= equip.equipment %>
+    </h2>
+    <p class="lead mb-4"><%= equip.description %></p>
+    <p class="lead mb-4">Category: <%= equip.category %></p>
+    <p class="lead mb-4">Location: <%= equip.location %></p>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+      <form
+        action="/<%= i.utility %>/<%= equip.equipment %>/<%= index %>/dates"
+        method="GET"
+      >
+        <button type="submit" class="btn btn-primary btn-lg me-md-2">
+          Dates/more info
+        </button>
+      </form>
+      <form
+        action="/<%= i.utility %>/<%= equip.equipment %>/delete"
+        class="px-4"
+        method="GET"
+      >
+        <button type="submit" class="btn btn-outline-secondary btn-lg px-4">
+          Delete Equipment
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<% }); }); %> <%- include("partials/footer.ejs") %>
