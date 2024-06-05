@@ -216,6 +216,29 @@
           }
         }
       ]
+    },
+    {
+      "name": "Microbiology/ BM",
+      "icon": "/PCA.svg",
+      "objects": [
+        {
+          "category": "Transiluminador com Captador de imagem",
+          "equipment": "Gel-Doc",
+          "description": "The Biorad Gel Doc EQ System w/ Universal Hood II is an easy-to-use, high-performance system that captures images in real time, allowing you to more accurately position and focus on your sample. The Gel Doc system combines a compact darkroom, UV-transilluminator workstation, CCD camera, motorized zoom lens, and user-friendly Quantity One software to document and quantitate gels stained with ethidium bromide and other fluorophores. The iris, zoom, and focus of the lens can be manipulated either onscreen within Quantity One software or by the instrument control panel. With Biorad&#39;s intuitive software, images acquired with the Gel Doc can be rapidly optimized, annotated, analyzed, and printed.",
+          "seller": null,
+          "brand": "Bio-Rad",
+          "serial_number": "UTAD-0023184",
+          "inventory_ref": null,
+          "location": "lab 3",
+          "responsible": "patrícia lage -> lab: wm&b_lab | email: plage@utad.pt",
+          "picture": "/imgsEquip/19.jpeg",
+          "dates": {
+            "last_maintenance": "99/99/9999",
+            "warranty": "99/99/9999",
+            "purchased": "99/99/9999"
+          }
+        }
+      ]
     }
   ]
 }
