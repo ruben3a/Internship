@@ -1,29 +1,36 @@
 <%- include("partials/header.ejs") %>
 
-<h1 class="text-center">Equipments based on the Lab`s Areas of Study</h1>
-<% data.forEach(utility => { %>
+<h1 class="text-center py-3">Equipments based on the Lab`s Areas of Study</h1>
+<div class="container py-3 px-lg-5">
+  <div class="row gx-lg-5">
+    <% data.forEach(utility => { %>
 
-<div class="bg-info px-4 py-5 my-5 text-center rounded-div">
-  <img
-    class="d-block mx-auto mb-4"
-    src="<%= utility.icon %>"
-    alt=""
-    width="80"
-    height="65"
-  />
-  <h2 class="display-5 fw-bold text-body-emphasis"><%= utility.name %></h2>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">utility description</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      <form action="/<%= utility.name %>/equipments" method="GET">
-        <button type="button submit" class="btn btn-primary btn-lg px-4 gap-3">
-          equipments
-        </button>
-      </form>
+    <div class="col-lg-6 col-xxl-4 mb-5">
+      <div class="card bg-info border-0 h-100 rounded-div">
+        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+          <div
+            class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"
+          >
+            <i class="bi bi-collection"></i>
+          </div>
+          <h3 class="fs-4 fw-bold"><%= utility.name %></h3>
+          <form
+            class="py-1"
+            action="/<%= utility.name %>/equipments"
+            method="GET"
+          >
+            <button
+              type="button submit"
+              class="btn btn-primary btn-lg px-4 gap-3"
+            >
+              equipments
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
+
+    <% }); %>
   </div>
 </div>
-
-<hr />
-
-<% }); %> <%-include("partials/footer.ejs") %>
+<%-include("partials/footer.ejs") %>
