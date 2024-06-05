@@ -20,11 +20,13 @@
       <%= equip.equipment %>
     </h2>
     <p class="lead mb-4"><%= equip.description %></p>
-    <p class="lead mb-4">Category: <%= equip.category %></p>
+    <p class="lead mb-4">
+      Next maintenance: <%= equip.dates.last_maintenance %>
+    </p>
     <p class="lead mb-4">Location: <%= equip.location %></p>
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
       <form
-        action="/<%= i.utility %>/<%= equip.equipment %>/<%= index %>/dates"
+        action="/<%= i.name %>/<%= equip.equipment %>/<%= index %>/dates"
         method="GET"
       >
         <button type="submit" class="btn btn-primary btn-lg me-md-2">
@@ -32,7 +34,7 @@
         </button>
       </form>
       <form
-        action="/<%= i.utility %>/<%= equip.equipment %>/delete"
+        action="/<%= i.name %>/<%= equip.equipment %>/delete"
         class="px-4"
         method="GET"
       >
