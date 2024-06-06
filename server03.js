@@ -139,6 +139,7 @@ app.post("/:utility/:equipments/Delete-Equipment", (req, res) => {
 app.get("/:utility/:equipments/:index/dates", (req, res) => {
   const utilityReq = req.params.utility;
   const index = parseInt(req.params.index);
+  const equipment = req.params.equipments;
   const utilitydata = parsedData.utilities.find(
     (utility) => utility.name === utilityReq
   );
@@ -153,7 +154,7 @@ app.get("/:utility/:equipments/:index/dates", (req, res) => {
     key,
     value,
   }));
-  res.render("dates3.ejs", { utilityReq, index, dates: datesArray });
+  res.render("dates3.ejs", { object, utilityReq, index, dates: datesArray });
 });
 
 app.listen(port, () => {

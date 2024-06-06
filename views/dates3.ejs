@@ -1,10 +1,32 @@
 <%- include("partials/header.ejs") %>
 
-<h2>Utility: <%= utilityReq %></h2>
-<h3>Object Index: <%= index %></h3>
-<ul>
-  <% dates.forEach(dateObj => { %>
-  <li><strong><%= dateObj.key %>:</strong> <%= dateObj.value %></li>
-  <% }); %>
-</ul>
+<div class="card bg-info py-4 px-2 rounded-div">
+  <h2 class="display-5 fw-bold px-4"><%=object.equipment%> informations:</h2>
+  <div class="mx-4 my-4">
+    <p><strong>Seller:</strong> <%= object.seller %></p>
+    <p><strong>Brand:</strong> <%= object.seller %></p>
+    <p><strong>Inventory reference:</strong> <%= object.seller %></p>
+    <p><strong>Serial Number:</strong> <%= object.seller %></p>
+    <p><strong>Relevant Dates:</strong></p>
+    <ul>
+      <% dates.forEach(dateObj => { %>
+
+      <li class="my-2">
+        <strong><%= dateObj.key %>:</strong> <%= dateObj.value %>
+      </li>
+      <% }); %>
+    </ul>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <form class="my-4" action="/<%=utilityReq%>/equipments" method="GET">
+        <button
+          type="submit"
+          class="btn btn-outline-dark btn-lg px-4 me-sm-3 fw-bold"
+        >
+          Back to equipments
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
 %> <%-include("partials/footer.ejs") %>
