@@ -6,8 +6,8 @@
       "objects": [
         {
           "category": "Analisador enzimático",
-          "equipment": "Analisador enzimático automático",
-          "description": "O Y15 é um analisador automático de bancada que permite: - Até 150 testes por hora; - Até 72 amostras simultâneas; - Até 4 posições de rack; - Até 9 configurações de comprimento de onda. - Mais de 60 tipos de análise, como sacarose, glicose, ácido málico, sulfito entre outros.",
+          "equipment": "Automatic Enzyme Analyzer",
+          "description": "The Y15 is an automatic benchtop analyzer that allows: - Up to 150 tests per hour; - Up to 72 simultaneous samples; - Up to 4 rack positions; - Up to 9 wavelength settings. - More than 60 types of analysis, such as sucrose, glucose, malic acid, sulfite, among others.",
           "seller": "Bdpl científica lda",
           "brand": "Biosystems",
           "serial_number": "831060532",
@@ -23,7 +23,7 @@
         },
         {
           "category": "Medidores",
-          "equipment": "Densimetro portátil",
+          "equipment": "Portable Densimeter",
           "description": "Portable, handheld measuring instrument analyzes liquids for density or specific gravity. Mettler Toledo Densito 30PX Density Meter operates on the oscillating tube principle. Results are automatically calculated into one of the following units: density, specific gravity, API degrees, Brix, % Alcohol, % H2SO4, °Baume,°Plato, Proof or a user defined unit. Shows results within seconds.",
           "seller": null,
           "brand": "Mettler Toledo",
