@@ -1,18 +1,12 @@
 <%- include("partials/header.ejs") %>
 
 <h1>Add New Equipment to <%= utility %></h1>
-<form id="equipmentForm" action="/<%= utility  %>/New-Equipment" method="post">
-  <div class="mb-3">
-    <label for="category" class="form-label">Category:</label>
-    <input
-      type="text"
-      class="form-control"
-      id="formGroupExampleInput2 category"
-      name="category"
-      required
-    />
-  </div>
-
+<form
+  class="mt-4"
+  id="equipmentForm"
+  action="/<%= utility  %>/New-Equipment"
+  method="post"
+>
   <div class="mb-3">
     <label for="equipment" class="form-label">Equipment name:</label>
     <input
@@ -20,6 +14,17 @@
       class="form-control"
       id="formGroupExampleInput2 equipment"
       name="equipment"
+      required
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="category" class="form-label">Category:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="formGroupExampleInput2 category"
+      name="category"
       required
     />
   </div>
@@ -58,7 +63,7 @@
   </div>
 
   <div class="mb-3">
-    <label for="serial_number" class="form-label">Serial_number:</label>
+    <label for="serial_number" class="form-label">Serial number:</label>
     <input
       type="text"
       class="form-control"
@@ -69,7 +74,7 @@
   </div>
 
   <div class="mb-3">
-    <label for="inventory_ref" class="form-label">Inventory_ref:</label>
+    <label for="inventory_ref" class="form-label">Inventory reference:</label>
     <input
       type="text"
       class="form-control"
@@ -138,6 +143,8 @@
       required
     />
   </div>
+
+  <input type="hidden" id="picture" name="picture" value="/Missing.svg" />
 
   <input type="submit" value="Submit" />
 </form>
