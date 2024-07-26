@@ -1,6 +1,6 @@
 node_modules/
-package-lock.json/
-package.json/
+package-lock.json
+package.json
 views/dates.ejs
 views/equipments.ejs
 views/utility.ejs
