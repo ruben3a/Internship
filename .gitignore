@@ -1,9 +1,9 @@
 node_modules/
 package-lock.json/
 package.json/
-dates.ejs
-equipments.ejs
-utility.ejs
+views/dates.ejs
+views/equipments.ejs
+views/utility.ejs
 tryouts.json
 server.js 
 server02.js 
