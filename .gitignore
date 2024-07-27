@@ -5,6 +5,6 @@ views/dates.ejs
 views/equipments.ejs
 views/utility.ejs
 tryouts.json
-server.js 
+server01.js 
 server02.js 
 equipamentos.json
